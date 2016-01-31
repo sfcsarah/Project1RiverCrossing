@@ -10,8 +10,18 @@ div {
   border: 3px solid black;
 }
 .container {
-
+  height: 500px;
+  width: 200px;
 }
 .sprite {
   clear:both;
+  width: 100px;
+  height: 60px;
+}
+
+.hidden {
+  display:none;
+}
+#rightBank {
+  margin-left:500px;
 }
