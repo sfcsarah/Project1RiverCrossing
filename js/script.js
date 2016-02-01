@@ -7,6 +7,7 @@ console.log($paraJ)
 var farmerLeft = document.getElementById('farmerLeft');
 var farmer = $('#farmerLeft');
 var boat = $('#boat');
+var leftBank = $('#leftBank');
 /*
 farmerLeft.onclick = clickFarmer;
 function clickFarmer() {
@@ -15,11 +16,30 @@ function clickFarmer() {
   farmerBoat.classList.toggle('hidden');
 }
 */
+
+/*
 function moveRight(item) {
   item.click(function() {
-    console.log(item+ "clicked");
+    console.log(item+ 'right clicked');
     boat.append(item);
   })
 }
 moveRight(farmer);
+*/
+
 // the above will append the farmer to the boat
+function moveLeft(item) {
+  item.click(function() {
+    if (item.hasClass('leftBank') == true) {
+      console.log("hasClass is working")
+    }
+    // the above tests the hasClass method in jQuery
+    console.log(item+ 'left clicked');
+    boat.append(item);
+    item.toggleClass('boat');
+    item.toggleClass('leftBank');
+
+
+  })
+}
+moveLeft(farmer);
