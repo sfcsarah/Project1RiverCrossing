@@ -14,6 +14,8 @@ var boat = $('#boat');
 var rightBankLoc = $('#rightBank');
 var buttonRiver = $('#crossRiver');
 
+var turn = 0;
+
 buttonRiver.click(function() {
   if (farmer.hasClass('boat')) {
     crossTheRiver();
@@ -37,9 +39,7 @@ $('.sprite').click(function() {
     else if ($(this).hasClass('right')) {
       moveTo(rightBankLoc,this);
     }
-
   }
-
 })
 
 function boatHasSpace() {

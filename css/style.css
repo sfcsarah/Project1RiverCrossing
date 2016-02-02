@@ -31,6 +31,20 @@ div {
   height: 60px;
 }
 
+
+
+.a .b {
+  /* looks for .b INSIDE of .a */
+}
+
+.a.b {
+  /* looks for elements with both .a and .b*/
+}
+
+.a, .b {
+  /* like || operator, it checks for either .a or .b and applies to both*/
+}
+
 /*.hidden {
   display:none;
 }*/
