@@ -9,30 +9,25 @@
   <body>
     <h1>River crossing puzzle</h1>
 
-    <div id="leftBank" class="container">
+    <button id="crossRiver"> Click me to cross the river </button>
+    <br>
+
+    <div id="leftBank" class="container leftBank">
       <p>Left bank</p>
-      <div id="farmerLeft" class="sprite leftBank">Farmer</div>
-      <div class="sprite">Fox</div>
-      <div class="sprite">Goose</div>
-      <div class="sprite">Cabbage</div>
+      <div id="farmer" class="sprite left land">Farmer</div>
+      <div id="fox" class="sprite left land">Fox</div>
+      <div id="goose" class="sprite left land">Goose</div>
+      <div id="cabbage" class="sprite left land">Cabbage</div>
     </div>
 
-    <div id="boat" class="container">
-      <p>Boat</p>
-      <!-- <div id="farmerBoat" class="sprite hidden">Farmer</div>
-      <div class="sprite">Fox</div>
-      <div class="sprite">Goose</div>
-      <div class="sprite">Cabbage</div> -->
-      <!-- let's leave this blank for now -->
+    <div id="river" class="container">
+      <p>River</p>
+      <div id="boat" class="left">
+      </div>
     </div>
 
-    <div id="rightBank" class="container">
+    <div id="rightBank" class="container rightBank">
       <p>Right bank</p>
-     <!--  <div id="farmerRight"class="sprite hidden">Farmer</div>
-      <div class="sprite">Fox</div>
-      <div class="sprite">Goose</div>
-      <div class="sprite">Cabbage</div> -->
-      <!-- let's try using addElement to move things -->
     </div>
 
     <script type="text/javascript" src="./js/script.js"></script>

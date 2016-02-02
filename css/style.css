@@ -6,12 +6,24 @@ div {
   position:relative;
   float:left;
   margin:0;
-  padding:15px;
+  padding:0px;
   border: 3px solid black;
+}
+.buttons {
+  clear:both;
 }
 .container {
   height: 500px;
-  width: 200px;
+  width: 120px;
+}
+#river {
+  width:450px;
+}
+.right {
+  float:right;
+}
+.left {
+  float:left;
 }
 .sprite {
   clear:both;
@@ -19,9 +31,7 @@ div {
   height: 60px;
 }
 
-.hidden {
+/*.hidden {
   display:none;
-}
-#rightBank {
-  margin-left:500px;
-}
+}*/
+/* not using the hidden class*/
