@@ -19,7 +19,7 @@ var turn = 0;
 buttonRiver.click(function() {
   if (farmer.hasClass('boat')) {
     crossTheRiver();
-    // function to check if valid move and add to turns
+    checkValid();
   }
   else {
     console.log('the farmer needs to paddle the boat')
@@ -69,4 +69,21 @@ function moveTo(ending,item) {
   ending.append($(item));
   $(item).toggleClass('land');
   $(item).toggleClass('boat');
+}
+
+function checkValid() {
+  if (farmer.hasClass('left')) {
+    checkUnattended('left','right')
+  }
+  else if (farmer.hasClass('right')) {
+    checkUnattended('right','left')
+  }
+}
+
+function checkUnattended(same,opposite) {
+  if ( farmer.hasClass(same) &&
+  ( (goose.hasClass(opposite) && fox.hasClass(opposite)) ||
+    (cabbage.hasClass(opposite) && goose.hasClass(opposite)) ) ) {
+      console.log("you lose");
+  }
 }
