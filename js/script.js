@@ -25,25 +25,17 @@ buttonRiver.click(function() {
 })
 
 $('.sprite').click(function() {
-  console.log('sprite clicked');
-  console.log(this);
   if ( $(this).hasClass('land') && boatHasSpace() && sameSide(this) ){
     console.log("going from bank to boat");
-    boat.append($(this));
-    $(this).toggleClass('land');
-    $(this).toggleClass('boat');
+    moveTo(boat,this);
   }
   else if ( $(this).hasClass('boat') && sameSide(this) ) {
     console.log("going from boat to bank");
     if ($(this).hasClass('left')) {
-      leftBankLoc.append($(this));
-      $(this).toggleClass('land');
-      $(this).toggleClass('boat');
+      moveTo(leftBankLoc,this);
     }
-  else if ($(this).hasClass('right')) {
-      rightBankLoc.append($(this));
-      $(this).toggleClass('land');
-      $(this).toggleClass('boat');
+    else if ($(this).hasClass('right')) {
+      moveTo(rightBankLoc,this);
     }
 
   }
@@ -71,4 +63,10 @@ function crossTheRiver() {
   boat.toggleClass('left');
   boat.children().toggleClass('right');
   boat.children().toggleClass('left');
+}
+
+function moveTo(ending,item) {
+  ending.append($(item));
+  $(item).toggleClass('land');
+  $(item).toggleClass('boat');
 }
